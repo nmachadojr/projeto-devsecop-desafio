@@ -52,9 +52,11 @@ jobs:
       # Dica: instale com "curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin"
       # e rode "grype dir:. --fail-on medium"
       - name: 📦 SCA - Grype
-      run: |
-          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
-          grype dir:. --fail-on medium
+        uses: anchore/scan-action@v6
+        with:
+            path: "."
+            fail-build: true
+            severity-cutoff: medium  
         # SUBSTITUA pelo comando real de instalação + execução do Grype
 
       # ✅ PASSO 6: Já está pronto — Deploy (só roda se tudo passar)
