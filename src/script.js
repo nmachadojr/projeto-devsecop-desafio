@@ -23,7 +23,7 @@ function addTask() {
 
     output.innerHTML = '<li>' + input.value + '</li>';
 
-    eval('console.log("Tarefa adicionada: ' + input.value + '")');
+    console.log("Tarefa adicionada:", input.value);
 
     input.value = '';
 }
