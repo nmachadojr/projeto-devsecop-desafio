@@ -30,11 +30,11 @@ Warning: 🛑 Leaks detected, see job summary for details
 
 O segredo identificado no código foi esse:
 
-const API_KEY = "ghp_xK92mNpL34rTvQ87wZaB56cDeFgHiJkL";
+const API_KEY = "";
 
 Porém, como falado pelo professor Pedro na aula de 13/07, a linha:
 
-const DB_PASSWORD = "admin@prod#2024";
+const DB_PASSWORD = "";
 
 também é considerada um segredo. Logo, ambas foram removidas, pois se trata de uma vulnerabilidade
 senhas ou quaisquer outras informações sigilosas virem hardcoded.
